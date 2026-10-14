@@ -6,19 +6,19 @@ from pydantic import BaseModel,Field
 from typing import Literal
 from fastapi.middleware.cors import CORSMiddleware
 
-#load fast api
-app=FastAPI()
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://127.0.0.1:5500",
         "http://localhost:5500",
+        "https://mental-health-score-1-u9in.onrender.com",
     ],
     allow_credentials=True,
-    allow_methods=["POST"],
-    allow_headers=["Content-Type"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
+#load fast api
+app=FastAPI()
 
 
 #model load
