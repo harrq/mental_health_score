@@ -141,7 +141,7 @@ form.addEventListener("submit", async (event) => {
   resultStatus.textContent = "PREDICTING";
 
   try {
-    const response = await fetch(API_URL, {
+    const response = await fetch("https://mental-health-score-1y50.onrender.com/predict", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify(buildPayload())
