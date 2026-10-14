@@ -6,6 +6,10 @@ from pydantic import BaseModel,Field
 from typing import Literal
 from fastapi.middleware.cors import CORSMiddleware
 
+
+#load fast api
+app=FastAPI()
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -17,8 +21,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-#load fast api
-app=FastAPI()
 
 
 #model load
